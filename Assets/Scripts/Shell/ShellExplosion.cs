@@ -45,6 +45,11 @@ public class ShellExplosion : MonoBehaviour
             targetHealth.TakeDamage(damage);
         }
 
+        if(m_ExplosionParticles == null)
+        {
+            return;
+        }
+
         m_ExplosionParticles.transform.parent = null;
 
         m_ExplosionParticles.Play();
